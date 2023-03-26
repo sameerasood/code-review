@@ -1,0 +1,15 @@
+{
+  "name": "review-1",
+  "version": "1.0.0",
+  "description": "Customer needs Opening statement I work for an School Reports company. We help teachers to find out how their students did on tests. We get a string of comma separated values with test results from schools, and we’d like you to build a simple report on top of that.",
+  "main": "schoolReport.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
