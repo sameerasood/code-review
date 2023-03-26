@@ -29,6 +29,10 @@ class SchoolReport {
   amberCount() {
     return `Amber: ${this.amber}`;
   }
+
+  redCount() {
+    return `Red: ${this.red}`;
+  }
 }
 
 module.exports = SchoolReport;

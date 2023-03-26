@@ -22,10 +22,11 @@ describe("class SchoolReport", () => {
   });
 
   it("returns the count of three colours", () => {
-    const schoolReport = new SchoolReport("Amber, Green");
-    expect(schoolReport.getGrades()).toEqual(["Amber", "Green"]);
+    const schoolReport = new SchoolReport("Red, Amber, Green");
+    expect(schoolReport.getGrades()).toEqual(["Red", "Amber", "Green"]);
     schoolReport.countGrades();
     expect(schoolReport.amberCount()).toEqual("Amber: 1");
     expect(schoolReport.greenCount()).toEqual("Green: 1");
+    expect(schoolReport.redCount()).toEqual("Red: 1");
   });
 });
