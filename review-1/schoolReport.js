@@ -1,5 +1,6 @@
 class SchoolReport {
   constructor(grades) {
+    if (typeof grades !== "string") throw "Grades must be a string";
     this.grades = grades.split(", ");
     this.green = 0;
     this.amber = 0;
@@ -35,8 +36,15 @@ class SchoolReport {
   }
 
   reportCard() {
-    return this.greenCount() + " " + this.amberCount() + " " + this.redCount();
+    const result =
+      this.greenCount() + " " + this.amberCount() + " " + this.redCount();
+    console.log(result);
+    return result;
   }
 }
 
 module.exports = SchoolReport;
+grades = "Red, Red, Amber, Amber, Green, Gred, Red, Amber, Green";
+schoolReport = new SchoolReport(grades);
+schoolReport.countGrades();
+schoolReport.reportCard();
