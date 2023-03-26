@@ -33,6 +33,10 @@ class SchoolReport {
   redCount() {
     return `Red: ${this.red}`;
   }
+
+  reportCard() {
+    return this.greenCount() + " " + this.amberCount() + " " + this.redCount();
+  }
 }
 
 module.exports = SchoolReport;

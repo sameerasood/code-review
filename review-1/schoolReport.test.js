@@ -44,4 +44,14 @@ describe("class SchoolReport", () => {
     expect(schoolReport.greenCount()).toEqual("Green: 1");
     expect(schoolReport.redCount()).toEqual("Red: 2");
   });
+
+  it("returns the combined report of all grades", () => {
+    const schoolReport = new SchoolReport("Red, Amber, Green");
+    expect(schoolReport.getGrades()).toEqual(["Red", "Amber", "Green"]);
+    schoolReport.countGrades();
+    expect(schoolReport.amberCount()).toEqual("Amber: 1");
+    expect(schoolReport.greenCount()).toEqual("Green: 1");
+    expect(schoolReport.redCount()).toEqual("Red: 1");
+    expect(schoolReport.reportCard()).toEqual("Green: 1 Amber: 1 Red: 1");
+  });
 });
