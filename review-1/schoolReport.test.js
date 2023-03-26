@@ -10,6 +10,22 @@ describe("class SchoolReport", () => {
     const schoolReport = new SchoolReport("Green, Green");
     expect(schoolReport.getGrades()).toEqual(["Green", "Green"]);
     schoolReport.countGrades();
-    expect(schoolReport.reportCard()).toEqual("Green: 2");
+    expect(schoolReport.greenCount()).toEqual("Green: 2");
+  });
+
+  it("returns the count of two colours", () => {
+    const schoolReport = new SchoolReport("Amber, Green");
+    expect(schoolReport.getGrades()).toEqual(["Amber", "Green"]);
+    schoolReport.countGrades();
+    expect(schoolReport.amberCount()).toEqual("Amber: 1");
+    expect(schoolReport.greenCount()).toEqual("Green: 1");
+  });
+
+  it("returns the count of three colours", () => {
+    const schoolReport = new SchoolReport("Amber, Green");
+    expect(schoolReport.getGrades()).toEqual(["Amber", "Green"]);
+    schoolReport.countGrades();
+    expect(schoolReport.amberCount()).toEqual("Amber: 1");
+    expect(schoolReport.greenCount()).toEqual("Green: 1");
   });
 });

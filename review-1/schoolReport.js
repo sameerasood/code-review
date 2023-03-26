@@ -1,9 +1,9 @@
 class SchoolReport {
   constructor(grades) {
     this.grades = grades.split(", ");
-    this.greenCount = 0;
-    this.amberCount = 0;
-    this.redCount = 0;
+    this.green = 0;
+    this.amber = 0;
+    this.red = 0;
   }
 
   getGrades() {
@@ -13,17 +13,21 @@ class SchoolReport {
   countGrades() {
     this.grades.forEach((grade) => {
       if (grade === "Green") {
-        this.greenCount += 1;
+        this.green += 1;
       } else if (grade === "Amber") {
-        this.amberCount += 1;
+        this.amber += 1;
       } else {
-        this.redCount += 1;
+        this.red += 1;
       }
     });
   }
 
-  reportCard() {
-    return `Green: ${this.greenCount}`;
+  greenCount() {
+    return `Green: ${this.green}`;
+  }
+
+  amberCount() {
+    return `Amber: ${this.amber}`;
   }
 }
 
