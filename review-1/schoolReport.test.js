@@ -29,4 +29,19 @@ describe("class SchoolReport", () => {
     expect(schoolReport.greenCount()).toEqual("Green: 1");
     expect(schoolReport.redCount()).toEqual("Red: 1");
   });
+
+  it("returns the count of three colours with colour occuring multiple times", () => {
+    const schoolReport = new SchoolReport("Red, Amber, Red, Green, Amber");
+    expect(schoolReport.getGrades()).toEqual([
+      "Red",
+      "Amber",
+      "Red",
+      "Green",
+      "Amber",
+    ]);
+    schoolReport.countGrades();
+    expect(schoolReport.amberCount()).toEqual("Amber: 2");
+    expect(schoolReport.greenCount()).toEqual("Green: 1");
+    expect(schoolReport.redCount()).toEqual("Red: 2");
+  });
 });
