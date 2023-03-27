@@ -1,6 +1,8 @@
 class SchoolReport {
   constructor(grades) {
-    if (typeof grades !== "string") throw "Grades must be a string";
+    if (typeof grades !== "string") {
+      throw new Error("Grades must be a string");
+    }
     this.grades = grades.split(", ");
     this.green = 0;
     this.amber = 0;

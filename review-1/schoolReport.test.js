@@ -55,7 +55,7 @@ describe("class SchoolReport", () => {
     expect(schoolReport.reportCard()).toEqual("Green: 1 Amber: 1 Red: 1");
   });
 
-  xit("throws an error if the type of grades is not a string", () => {
-    expect(new SchoolReport(1245)).toThrow("Grades must be a string");
+  it("throws an error if the type of grades is not a string", () => {
+    expect(() => new SchoolReport(1245)).toThrow("Grades must be a string");
   });
 });
