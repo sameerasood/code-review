@@ -31,3 +31,5 @@ OUTPUT: [60,50,1000]
 case 4: returns array with modified lower and upper range
 INPUT: [60,20,1200]
 OUTPUT: [60,40,1000]
+
+Edge cases: if th soundwave is corrupted
