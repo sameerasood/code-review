@@ -12,7 +12,17 @@ describe("class SpellChecker", () => {
   });
 
   it("returns four letter string", () => {
-    const spellChecker = new SpellChecker("word");
-    expect(spellChecker.getResult()).toEqual("word");
+    const spellChecker = new SpellChecker("words");
+    expect(spellChecker.getResult()).toEqual("words");
+  });
+
+  it("returns four letter string", () => {
+    const spellChecker = new SpellChecker("wrds");
+    expect(spellChecker.getResult()).toEqual("~wrds~");
+  });
+
+  it("gives an error input is not a string", () => {
+    const spellChecker = new SpellChecker(123);
+    expect(spellChecker.getResult()).toThrow("Enter a string");
   });
 });
